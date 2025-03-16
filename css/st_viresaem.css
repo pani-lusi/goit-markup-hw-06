@@ -1,0 +1,317 @@
+.section {
+  padding-top: 120px;
+}
+
+.section-list {
+  gap: 24px;
+}
+
+.li-title {
+  margin-bottom: 8px;
+}
+
+.text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+/* #region скидуєм стилі */
+
+/* #endregion скидуєм стилі*/
+
+/* #region header */
+
+.main-nav .logo {
+  padding: 24px 0;
+  margin-right: 76px;
+}
+.logo-style {
+  color: #2e2f42;
+}
+.nav-item {
+  position: relative;
+}
+
+.contact-list {
+  display: flex;
+  gap: 40px;
+}
+.contact-list .link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+  padding: 24px 0;
+  display: block;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav-list {
+  display: flex;
+  gap: 40px;
+}
+
+/* #endregion header*/
+
+/* #region hero */
+.hero {
+  max-width: 1440px;
+  margin: 0 auto;
+
+  background-color: #2e2f42;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/Hero/people-office.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  text-align: center;
+  padding: 188px 0;
+}
+.hero-title {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.07;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #ffffff;
+  max-width: 496px;
+  margin: 0 auto;
+}
+/* #endregion hero */
+
+/* #region Features section */
+
+.features {
+  padding: 120px 0;
+}
+
+/* #endregion Features section */
+
+/* #region Our Team */
+.team {
+  background-color: #f4f4fd;
+  padding: 120px 0;
+}
+.team.container {
+  padding-top: 120px;
+  /* padding-bottom: 46px; */
+}
+.team-list {
+  display: flex;
+}
+
+/* #endregion Our Team */
+
+/* #region Our Portfolio */
+
+.portfolio.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+/* #endregion Our Portfolio */
+
+/* #region footer */
+
+.main-footer .container {
+  display: flex;
+  align-items: baseline;
+}
+
+.main-footer .logo {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+.info {
+  flex-basis: 264px;
+  margin-right: 120px;
+}
+.main-footer .text {
+  width: 264px;
+}
+
+.main-footer .contacts {
+  flex-basis: 208px;
+}
+
+.main-footer .contacts {
+  margin-right: 80px;
+}
+
+/* #endregion footer*/
+/* #region backdrop & modal */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  background: rgba(46, 47, 66, 0.4);
+  opacity: 0; /*прозрачность эл-та, 0 полностью прозрачн, т е нет темного окна*/
+  visibility: hidden; /*эл-т невидим, активен слой под ним*/
+  pointer-events: none;
+  /*эл-т полностью неактивный для кликов, наведения, фокуса и т.д.*/
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* backdrop */
+.is-open {
+  opacity: 1; /*непрозрачен, т е есть темное окно*/
+  visibility: visible; /*эл-т видим, слой под ним неактивен*/
+  pointer-events: auto; /*эл-т полностью активн для кликов, и т.д.*/
+}
+.modal {
+  min-width: 408px;
+  min-height: 584px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  background-color: #fcfcfc;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
+    0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 24px;
+  padding-top: 72px;
+}
+.modal-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #2e2f42;
+  margin-bottom: 16px;
+}
+
+.form-wrraper-cont {
+  margin-bottom: 8px;
+}
+.form-wrraper-cont:nth-child(4) {
+  margin-bottom: 16px;
+}
+.form-user-label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+
+.form-user-input {
+  width: 100%;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  height: 40px;
+  padding-left: 38px;
+  /* outline: none; при уст курсора чтоб не появл внешн рамка - научил препод*/
+  outline: transparent; /*требование робота*/
+  background-color: transparent;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-user-input:focus {
+  border: 1px solid #4d5ae5;
+}
+.form-user-icon-wrapper {
+  position: relative;
+}
+.form-user-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 16px;
+  fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-user-input:focus + .form-user-icon {
+  fill: #4d5ae5;
+}
+.form-user-coment {
+  width: 100%;
+  resize: none;
+  min-height: 120px;
+  outline: none;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  padding: 8px 16px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  background-color: transparent; /*требование робота*/
+  outline: transparent; /*требование робота*/
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-user-coment:focus {
+  border: 1px solid #4d5ae5;
+}
+.form-user-coment::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+}
+.castom-checkbox {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  fill: transparent;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  cursor: pointer;
+  margin-right: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.checkbox:checked + .form-user-checkbox .castom-checkbox {
+  background-color: #404bbf;
+  border: transparent;
+  fill: #f4f4fd;
+}
+.form-user-checkbox {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+.form-user-checkbox .link {
+  text-decoration: underline;
+  color: #4d5ae5;
+}
+.form-wrapper-checkbox {
+  margin-bottom: 24px;
+}
+.send-btn {
+  margin-top: 0;
+  min-width: 169px; /* min-width чтобы влезло 2 слова*/
+
+  color: #ffffff;
+
+  font-size: 16px;
+
+  font-weight: 500;
+  line-height: 1.5;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* #endregion backdrop & modal*/
